@@ -16,7 +16,7 @@ public class HotelController {
     private static Logger logger = Logger.getLogger(HotelController.class);
 
     /**
-     * Function to count number of weekdays & weekends
+     * Function to return cheapest Hotel
      *
      * @param customerType - Type of Customer
      * @param listOfDates  - List of dates entered by user

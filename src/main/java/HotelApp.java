@@ -26,6 +26,11 @@ public class HotelApp {
     private ArrayList<Date> datelist = new ArrayList<>();
     private HotelController hotelController = new HotelController();
 
+    /**
+     * Main Function that starts calling all methods.
+     *
+     * @throws FileNotFoundException
+     */
     public static void main(String[] args) throws FileNotFoundException {
         Scanner sc = new Scanner(System.in);
         String input;
@@ -40,7 +45,7 @@ public class HotelApp {
     }
 
     /**
-     * Function to take input from user
+     * Function to take & validate input from user
      */
     private void validateInput(String input) {
         validateDate(input);
@@ -99,6 +104,8 @@ public class HotelApp {
     }
 
     /**
+     * Function to load list of customers from customers.yml file
+     *
      * @return - returns list of customer types
      * @throws FileNotFoundException
      */
