@@ -1,6 +1,8 @@
 import controller.HotelController;
 import model.Customer;
 import model.Hotel;
+import model.HotelRate;
+import model.Rate;
 import org.apache.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 import view.DisplayHotel;
@@ -19,12 +21,13 @@ import java.util.*;
 public class HotelApp {
 
     private static Logger logger = Logger.getLogger(HotelApp.class);
+    private static boolean flag;
     StringTokenizer token;
-    private String customerType;
-    private List<Hotel> hotelList = null;
+    private static String customerType;
+    private static List<Hotel> hotelList = null;
     private List<Customer> customerList = null;
-    private ArrayList<Date> datelist = new ArrayList<>();
-    private HotelController hotelController = new HotelController();
+    private static ArrayList<Date> datelist = new ArrayList<>();
+    private static HotelController hotelController = new HotelController();
 
     /**
      * Main Function that starts calling all methods.
@@ -36,12 +39,44 @@ public class HotelApp {
         String input;
         System.out.println("Enter Information \n<customer_type>: <date1>, <date2>, <date3>,...");
         input = sc.nextLine().trim();
-
         HotelApp hotelAppObj = new HotelApp();
-        hotelAppObj.loadHotels();
-        hotelAppObj.loadCustomer();
+
+        hotelAppObj.loadDetails();
         hotelAppObj.validateInput(input);
 
+
+        if (flag) {
+            Hotel cheapHotel = hotelController.getCheapestHotel(customerType, datelist, (ArrayList<Hotel>) hotelList);
+            DisplayHotel.display(cheapHotel);
+        } else
+            System.out.println("Please Enter Correct Input");
+    }
+
+    /**
+     *  Function to load hotels,customer types & hotel rates
+     *
+     * @return
+     * @throws FileNotFoundException
+     */
+    public List<Hotel> loadDetails() throws FileNotFoundException {
+        loadHotels();
+        loadCustomer();
+        loadHotelRates();
+        return hotelList;
+    }
+
+    /**
+     * Function to load hotel rates
+     */
+    private void loadHotelRates()
+    {
+        for (Hotel h:hotelList) {
+            HashMap<String, List<Rate>> listofHotelRates = new HashMap<>();
+            List<HotelRate> rates = h.getRates();
+            for (HotelRate cust:rates)
+                listofHotelRates.put(cust.getCustomer().getCustType(), cust.getRate());
+            h.setCustHotalRates(listofHotelRates);
+        }
     }
 
     /**
@@ -49,17 +84,10 @@ public class HotelApp {
      */
     private void validateInput(String input) {
         validateDate(input);
-        boolean flag = false;
-
         for (Customer cust : customerList) {
             if (cust.getCustType().equals(customerType) && (!datelist.isEmpty()))
                 flag = true;
         }
-        if (flag) {
-            Hotel cheapHotel = hotelController.searchHotel(customerType, datelist, (ArrayList<Hotel>) hotelList);
-            DisplayHotel.display(cheapHotel);
-        } else
-            System.out.println("Please Enter Correct Input");
     }
 
     /**
@@ -96,7 +124,7 @@ public class HotelApp {
      */
     private List<Hotel> loadHotels() throws FileNotFoundException {
         Yaml obj = new Yaml();
-        String path = "/home/synerzip/HotelRoomReservationSystem/src/main/java/inputFiles/hotels.yml";
+        String path = "/home/synerzip/HotelRoomReservation/src/main/java/inputFiles/hotels.yml";
         InputStream inputStream = new FileInputStream(new File(path));
         hotelList = (List<Hotel>) obj.load(inputStream);
         logger.info("hotels.yml file loaded successfully");
@@ -111,7 +139,7 @@ public class HotelApp {
      */
     private List<Customer> loadCustomer() throws FileNotFoundException {
         Yaml obj = new Yaml();
-        String path = "/home/synerzip/HotelRoomReservationSystem/src/main/java/inputFiles/customers.yml";
+        String path = "/home/synerzip/HotelRoomReservation/src/main/java/inputFiles/customers.yml";
         InputStream inputStream = new FileInputStream(new File(path));
         customerList = (List<Customer>) obj.load(inputStream);
         logger.info("customers.yml file loaded successfully");

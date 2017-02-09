@@ -23,7 +23,7 @@ public class Rate {
 
     @Override
     public String toString() {
-        return rateType + " Rate : " + rateValue;
+        return  " Rate : " + rateValue;
     }
 
 }

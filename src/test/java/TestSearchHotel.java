@@ -48,18 +48,19 @@ public class TestSearchHotel {
         datelist.add(date);
         datelist.add(date1);
 
-        Method listOfHotelTest = HotelApp.class.getDeclaredMethod("loadHotels");
+
+        Method listOfHotelTest = HotelApp.class.getDeclaredMethod("loadDetails");
         listOfHotelTest.setAccessible(true);
         ArrayList<Hotel> hotelList = (ArrayList<Hotel>) listOfHotelTest.invoke(hotelMain);
 
-        Method findCheapestHotelTest = HotelController.class.getDeclaredMethod("getCheapestHotel", String.class, ArrayList.class, ArrayList.class);
-        findCheapestHotelTest.setAccessible(true);
-        Hotel nameOfHotel = (Hotel) findCheapestHotelTest.invoke(searchHotel, "Regular", datelist, hotelList);
-        String nm = nameOfHotel.getName();
+        Method cheapestHotelTest = HotelController.class.getDeclaredMethod("getCheapestHotel", String.class, ArrayList.class, ArrayList.class);
+        cheapestHotelTest.setAccessible(true);
+        Hotel nameOfHotel = (Hotel) cheapestHotelTest.invoke(searchHotel, "REGULAR", datelist, hotelList);
+
+        String nm =nameOfHotel.getName();
         String expectedResult = "SMN Deluxe";
 
         System.out.println("Expected : " + expectedResult + "\nActual   : " + nm);
         assertEquals("Result  : ", expectedResult, nm);
     }
 }
-

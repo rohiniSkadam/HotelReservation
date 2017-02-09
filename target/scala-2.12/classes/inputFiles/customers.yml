@@ -2,3 +2,5 @@
   custType : REGULAR
 - !!model.Customer
   custType : REWARDS
+- !!model.Customer
+  custType : GUEST

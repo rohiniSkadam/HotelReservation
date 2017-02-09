@@ -20,48 +20,74 @@
       - !!model.Rate
         rateType : WeekEnd
         rateValue : 1250
+    - !!model.HotelRate
+      customer : !!model.Customer {custType : GUEST}
+      rate :
+      - !!model.Rate
+        rateType : WeekDay
+        rateValue : 100
+      - !!model.Rate
+        rateType : WeekEnd
+        rateValue : 500
 - !!model.Hotel
   rating : 4
   name : SMN Deluxe
   rates :
-     - !!model.HotelRate
-       customer : !!model.Customer {custType : REGULAR}
-       rate :
-       - !!model.Rate
-         rateType : WeekDay
-         rateValue : 2000
-       - !!model.Rate
-         rateType : WeekEnd
-         rateValue : 1500
-     - !!model.HotelRate
-       customer : !!model.Customer {custType : REWARDS}
-       rate :
-       - !!model.Rate
-         rateType : WeekDay
-         rateValue : 1500
-       - !!model.Rate
-         rateType : WeekEnd
-         rateValue : 1200
+    - !!model.HotelRate
+      customer : !!model.Customer {custType : REGULAR}
+      rate :
+      - !!model.Rate
+        rateType : WeekDay
+        rateValue : 2000
+      - !!model.Rate
+        rateType : WeekEnd
+        rateValue : 1500
+    - !!model.HotelRate
+      customer : !!model.Customer {custType : REWARDS}
+      rate :
+      - !!model.Rate
+        rateType : WeekDay
+        rateValue : 1500
+      - !!model.Rate
+        rateType : WeekEnd
+        rateValue : 1200
+    - !!model.HotelRate
+      customer : !!model.Customer {custType : GUEST}
+      rate :
+      - !!model.Rate
+        rateType : WeekDay
+        rateValue : 200
+      - !!model.Rate
+        rateType : WeekEnd
+        rateValue : 600
 - !!model.Hotel
   rating : 5
   name : SMN Executive
   rates :
-     - !!model.HotelRate
-       customer : !!model.Customer {custType : REGULAR}
-       rate :
-       - !!model.Rate
-         rateType : WeekDay
-         rateValue : 3000
-       - !!model.Rate
-         rateType : WeekEnd
-         rateValue : 2500
-     - !!model.HotelRate
-         customer : !!model.Customer {custType : REWARDS}
-         rate :
-         - !!model.Rate
-           rateType : WeekDay
-           rateValue : 2500
-         - !!model.Rate
-           rateType : WeekEnd
-           rateValue : 2200
-
+    - !!model.HotelRate
+      customer : !!model.Customer {custType : REGULAR}
+      rate :
+      - !!model.Rate
+        rateType : WeekDay
+        rateValue : 3000
+      - !!model.Rate
+        rateType : WeekEnd
+        rateValue : 2500
+    - !!model.HotelRate
+      customer : !!model.Customer {custType : REWARDS}
+      rate :
+      - !!model.Rate
+        rateType : WeekDay
+        rateValue : 2500
+      - !!model.Rate
+        rateType : WeekEnd
+        rateValue : 2200
+    - !!model.HotelRate
+      customer : !!model.Customer {custType : GUEST}
+      rate :
+      - !!model.Rate
+        rateType : WeekDay
+        rateValue : 300
+      - !!model.Rate
+        rateType : WeekEnd
+        rateValue : 300

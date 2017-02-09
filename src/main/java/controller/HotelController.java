@@ -1,7 +1,6 @@
 package controller;
 
 import model.Hotel;
-import model.HotelRate;
 import model.Rate;
 import org.apache.log4j.Logger;
 
@@ -16,24 +15,13 @@ public class HotelController {
     private static Logger logger = Logger.getLogger(HotelController.class);
 
     /**
-     * Function to return cheapest Hotel
-     *
-     * @param customerType - Type of Customer
-     * @param listOfDates  - List of dates entered by user
-     * @param hotelList    - List of hotels available
-     */
-    public Hotel searchHotel(String customerType, ArrayList<Date> listOfDates, ArrayList<Hotel> hotelList) {
-        return getCheapestHotel(customerType, listOfDates, hotelList);
-    }
-
-    /**
      * Function to find cheapest Hotel from List of hotel
      *
      * @param customerType -Type of Customer
      * @param listOfDates  - List of dates
      * @param hotels       - List of available Hotels
      */
-    private Hotel getCheapestHotel(String customerType, ArrayList<Date> listOfDates, ArrayList<Hotel> hotels) {
+    public Hotel getCheapestHotel(String customerType, ArrayList<Date> listOfDates, ArrayList<Hotel> hotels) {
         getTotalRoomRate(customerType, hotels, listOfDates);
         Collections.sort(hotels, new Comparator<Hotel>() {
             @Override
@@ -57,12 +45,8 @@ public class HotelController {
      */
     private void getTotalRoomRate(String customerType, ArrayList<Hotel> hotels, ArrayList<Date> listOfDates) {
         for (Hotel h : hotels) {
-            HotelRate regularRate = h.getRates().get(0);
-            HotelRate rewardsRate = h.getRates().get(1);
-            if (customerType.equals(regularRate.getCustomer().getCustType()))
-                getRateValues(h, regularRate, listOfDates);
-            else
-                getRateValues(h, rewardsRate, listOfDates);
+            List<Rate> hotelRate = h.getCustHotalRates().get(customerType);
+            getRateValues(h, hotelRate, listOfDates);
         }
     }
 
@@ -73,10 +57,9 @@ public class HotelController {
      * @param hotelRate   - individual Hotel Rate
      * @param listOfDates - date list
      */
-    private void getRateValues(Hotel hotel, HotelRate hotelRate, ArrayList<Date> listOfDates) {
-        //  int totalRate;
-        Rate weekdayRate = hotelRate.getRate().get(0);
-        Rate weekendRate = hotelRate.getRate().get(1);
+    private void getRateValues(Hotel hotel, List<Rate> hotelRate, ArrayList<Date> listOfDates) {
+        Rate weekdayRate = hotelRate.get(0);
+        Rate weekendRate = hotelRate.get(1);
         int weekday = weekdayRate.getRateValue();
         int weekend = weekendRate.getRateValue();
         int totalRate = getCalculateRate(weekday, weekend, listOfDates);

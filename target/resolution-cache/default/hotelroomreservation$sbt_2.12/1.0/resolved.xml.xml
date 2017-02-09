@@ -4,7 +4,7 @@
 		module="hotelroomreservation$sbt_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170208120743"
+		publication="20170209143725"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

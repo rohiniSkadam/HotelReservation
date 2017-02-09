@@ -1,5 +1,6 @@
 package model;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Hotel {
@@ -7,6 +8,16 @@ public class Hotel {
     private String name;
     private List<HotelRate> rates;
     private int totalRate;
+    private HashMap<String,List<Rate>> custHotalRates;
+
+
+    public HashMap<String, List<Rate>> getCustHotalRates() {
+        return custHotalRates;
+    }
+
+    public void setCustHotalRates(HashMap<String, List<Rate>> custHotalRates) {
+        this.custHotalRates = custHotalRates;
+    }
 
     public int getRating() {
         return rating;
