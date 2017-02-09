@@ -22,12 +22,12 @@ public class HotelApp {
 
     private static Logger logger = Logger.getLogger(HotelApp.class);
     private static boolean flag;
-    StringTokenizer token;
     private static String customerType;
     private static List<Hotel> hotelList = null;
-    private List<Customer> customerList = null;
     private static ArrayList<Date> datelist = new ArrayList<>();
     private static HotelController hotelController = new HotelController();
+    StringTokenizer token;
+    private List<Customer> customerList = null;
 
     /**
      * Main Function that starts calling all methods.
@@ -39,44 +39,17 @@ public class HotelApp {
         String input;
         System.out.println("Enter Information \n<customer_type>: <date1>, <date2>, <date3>,...");
         input = sc.nextLine().trim();
+
         HotelApp hotelAppObj = new HotelApp();
 
         hotelAppObj.loadDetails();
         hotelAppObj.validateInput(input);
-
 
         if (flag) {
             Hotel cheapHotel = hotelController.getCheapestHotel(customerType, datelist, (ArrayList<Hotel>) hotelList);
             DisplayHotel.display(cheapHotel);
         } else
             System.out.println("Please Enter Correct Input");
-    }
-
-    /**
-     *  Function to load hotels,customer types & hotel rates
-     *
-     * @return
-     * @throws FileNotFoundException
-     */
-    public List<Hotel> loadDetails() throws FileNotFoundException {
-        loadHotels();
-        loadCustomer();
-        loadHotelRates();
-        return hotelList;
-    }
-
-    /**
-     * Function to load hotel rates
-     */
-    private void loadHotelRates()
-    {
-        for (Hotel h:hotelList) {
-            HashMap<String, List<Rate>> listofHotelRates = new HashMap<>();
-            List<HotelRate> rates = h.getRates();
-            for (HotelRate cust:rates)
-                listofHotelRates.put(cust.getCustomer().getCustType(), cust.getRate());
-            h.setCustHotalRates(listofHotelRates);
-        }
     }
 
     /**
@@ -114,6 +87,33 @@ public class HotelApp {
             return null;
         }
         return datelist;
+    }
+
+    /**
+     * Function to load hotels,customer types & hotel rates
+     *
+     * @return
+     * @throws FileNotFoundException
+     */
+    public List<Hotel> loadDetails() throws FileNotFoundException {
+        loadHotels();
+        loadCustomer();
+        loadHotelRates();
+        return hotelList;
+    }
+
+    /**
+     * Function to load hotel rates
+     */
+    private void loadHotelRates() {
+
+        for (Hotel h : hotelList) {
+            HashMap<String, List<Rate>> listofHotelRates = new HashMap<>();
+            List<HotelRate> rates = h.getRates();
+            for (HotelRate cust : rates)
+                listofHotelRates.put(cust.getCustomer().getCustType(), cust.getRate());
+            h.setCustHotalRates(listofHotelRates);
+        }
     }
 
     /**

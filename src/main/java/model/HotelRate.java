@@ -28,4 +28,5 @@ public class HotelRate {
         return customer + "  " + rate + "\n";
     }
 
+
 }

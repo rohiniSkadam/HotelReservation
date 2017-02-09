@@ -1,6 +1,8 @@
 package model;
 
 public class Customer {
+    private String custType;
+
     public String getCustType() {
         return custType;
     }
@@ -8,10 +10,6 @@ public class Customer {
     public void setCustType(String custType) {
         this.custType = custType;
     }
-
-    private String custType;
-
-
 
     @Override
     public String toString() {

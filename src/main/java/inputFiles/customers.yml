@@ -4,3 +4,4 @@
   custType : REWARDS
 - !!model.Customer
   custType : GUEST
+

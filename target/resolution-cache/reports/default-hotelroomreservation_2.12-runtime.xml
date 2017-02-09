@@ -1,73 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
 <ivy-report version="1.0">
-	<info
-		organisation="default"
-		module="hotelroomreservation_2.12"
-		revision="1.0"
-		conf="runtime"
-		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170208120744"/>
-	<dependencies>
-		<module organisation="junit" name="junit">
-			<revision name="4.11" status="release" pubdate="20121115005147" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
-				<license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
-				<metadata-artifact status="no" details="" size="2897" time="0" location="/home/synerzip/.ivy2/cache/junit/junit/ivy-4.11.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/junit/junit/4.11/junit-4.11.pom"/>
-				<caller organisation="default" name="hotelroomreservation_2.12" conf="compile, runtime" rev="4.11" rev-constraint-default="4.11" rev-constraint-dynamic="4.11" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="junit" type="jar" ext="jar" status="no" details="" size="245039" time="0" location="/home/synerzip/.ivy2/cache/junit/junit/jars/junit-4.11.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/junit/junit/4.11/junit-4.11.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.hamcrest" name="hamcrest-core">
-			<revision name="1.3" status="release" pubdate="20120710023802" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
-				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
-				<metadata-artifact status="no" details="" size="2617" time="0" location="/home/synerzip/.ivy2/cache/org.hamcrest/hamcrest-core/ivy-1.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom"/>
-				<caller organisation="junit" name="junit" conf="default, compile, runtime, master" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="4.11"/>
-				<artifacts>
-					<artifact name="hamcrest-core" type="jar" ext="jar" status="no" details="" size="45024" time="0" location="/home/synerzip/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="log4j" name="log4j">
-			<revision name="1.2.17" status="release" pubdate="20120526151339" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logging.apache.org/log4j/1.2/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3670" time="0" location="/home/synerzip/.ivy2/cache/log4j/log4j/ivy-1.2.17.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom"/>
-				<caller organisation="default" name="hotelroomreservation_2.12" conf="compile, runtime" rev="1.2.17" rev-constraint-default="1.2.17" rev-constraint-dynamic="1.2.17" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="log4j" type="bundle" ext="jar" status="no" details="" size="489884" time="0" location="/home/synerzip/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.yaml" name="snakeyaml">
-			<revision name="1.8" status="release" pubdate="20110215162625" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.snakeyaml.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
-				<license name="Apache License Version 2.0" url="LICENSE.txt"/>
-				<metadata-artifact status="no" details="" size="3381" time="0" location="/home/synerzip/.ivy2/cache/org.yaml/snakeyaml/ivy-1.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.8/snakeyaml-1.8.pom"/>
-				<caller organisation="default" name="hotelroomreservation_2.12" conf="compile, runtime" rev="1.8" rev-constraint-default="1.8" rev-constraint-dynamic="1.8" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="snakeyaml" type="jar" ext="jar" status="no" details="" size="257733" time="0" location="/home/synerzip/.ivy2/cache/org.yaml/snakeyaml/jars/snakeyaml-1.8.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.8/snakeyaml-1.8.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.1" status="release" pubdate="20161205163923" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.1/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
-				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2653" time="0" location="/home/synerzip/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1.pom"/>
-				<caller organisation="default" name="hotelroomreservation_2.12" conf="compile, runtime" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="1.0"/>
-				<artifacts>
-					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5272325" time="0" location="/home/synerzip/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.1.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-	</dependencies>
+    <info
+            organisation="default"
+            module="hotelroomreservation_2.12"
+            revision="1.0"
+            conf="runtime"
+            confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+            date="20170208120744"/>
+    <dependencies>
+        <module organisation="junit" name="junit">
+            <revision name="4.11" status="release" pubdate="20121115005147" resolver="sbt-chain" artresolver="sbt-chain"
+                      homepage="http://junit.org" downloaded="false" searched="false" default="false"
+                      conf="default, compile, runtime, default(compile), master" position="3">
+                <license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
+                <metadata-artifact status="no" details="" size="2897" time="0"
+                                   location="/home/synerzip/.ivy2/cache/junit/junit/ivy-4.11.xml" searched="false"
+                                   origin-is-local="false"
+                                   origin-location="https://repo1.maven.org/maven2/junit/junit/4.11/junit-4.11.pom"/>
+                <caller organisation="default" name="hotelroomreservation_2.12" conf="compile, runtime" rev="4.11"
+                        rev-constraint-default="4.11" rev-constraint-dynamic="4.11" callerrev="1.0"/>
+                <artifacts>
+                    <artifact name="junit" type="jar" ext="jar" status="no" details="" size="245039" time="0"
+                              location="/home/synerzip/.ivy2/cache/junit/junit/jars/junit-4.11.jar">
+                        <origin-location is-local="false"
+                                         location="https://repo1.maven.org/maven2/junit/junit/4.11/junit-4.11.jar"/>
+                    </artifact>
+                </artifacts>
+            </revision>
+        </module>
+        <module organisation="org.hamcrest" name="hamcrest-core">
+            <revision name="1.3" status="release" pubdate="20120710023802" resolver="sbt-chain" artresolver="sbt-chain"
+                      homepage="" downloaded="false" searched="false" default="false"
+                      conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+                <license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+                <metadata-artifact status="no" details="" size="2617" time="0"
+                                   location="/home/synerzip/.ivy2/cache/org.hamcrest/hamcrest-core/ivy-1.3.xml"
+                                   searched="false" origin-is-local="false"
+                                   origin-location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom"/>
+                <caller organisation="junit" name="junit" conf="default, compile, runtime, master" rev="1.3"
+                        rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="4.11"/>
+                <artifacts>
+                    <artifact name="hamcrest-core" type="jar" ext="jar" status="no" details="" size="45024" time="0"
+                              location="/home/synerzip/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar">
+                        <origin-location is-local="false"
+                                         location="https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+                    </artifact>
+                </artifacts>
+            </revision>
+        </module>
+        <module organisation="log4j" name="log4j">
+            <revision name="1.2.17" status="release" pubdate="20120526151339" resolver="sbt-chain"
+                      artresolver="sbt-chain" homepage="http://logging.apache.org/log4j/1.2/" downloaded="false"
+                      searched="false" default="false" conf="default, compile, runtime, default(compile), master"
+                      position="2">
+                <license name="The Apache Software License, Version 2.0"
+                         url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+                <metadata-artifact status="no" details="" size="3670" time="0"
+                                   location="/home/synerzip/.ivy2/cache/log4j/log4j/ivy-1.2.17.xml" searched="false"
+                                   origin-is-local="false"
+                                   origin-location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.pom"/>
+                <caller organisation="default" name="hotelroomreservation_2.12" conf="compile, runtime" rev="1.2.17"
+                        rev-constraint-default="1.2.17" rev-constraint-dynamic="1.2.17" callerrev="1.0"/>
+                <artifacts>
+                    <artifact name="log4j" type="bundle" ext="jar" status="no" details="" size="489884" time="0"
+                              location="/home/synerzip/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar">
+                        <origin-location is-local="false"
+                                         location="https://repo1.maven.org/maven2/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+                    </artifact>
+                </artifacts>
+            </revision>
+        </module>
+        <module organisation="org.yaml" name="snakeyaml">
+            <revision name="1.8" status="release" pubdate="20110215162625" resolver="sbt-chain" artresolver="sbt-chain"
+                      homepage="http://www.snakeyaml.org" downloaded="false" searched="false" default="false"
+                      conf="default, compile, runtime, default(compile), master" position="1">
+                <license name="Apache License Version 2.0" url="LICENSE.txt"/>
+                <metadata-artifact status="no" details="" size="3381" time="0"
+                                   location="/home/synerzip/.ivy2/cache/org.yaml/snakeyaml/ivy-1.8.xml" searched="false"
+                                   origin-is-local="false"
+                                   origin-location="https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.8/snakeyaml-1.8.pom"/>
+                <caller organisation="default" name="hotelroomreservation_2.12" conf="compile, runtime" rev="1.8"
+                        rev-constraint-default="1.8" rev-constraint-dynamic="1.8" callerrev="1.0"/>
+                <artifacts>
+                    <artifact name="snakeyaml" type="jar" ext="jar" status="no" details="" size="257733" time="0"
+                              location="/home/synerzip/.ivy2/cache/org.yaml/snakeyaml/jars/snakeyaml-1.8.jar">
+                        <origin-location is-local="false"
+                                         location="https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.8/snakeyaml-1.8.jar"/>
+                    </artifact>
+                </artifacts>
+            </revision>
+        </module>
+        <module organisation="org.scala-lang" name="scala-library">
+            <revision name="2.12.1" status="release" pubdate="20161205163923" resolver="sbt-chain"
+                      artresolver="sbt-chain" homepage="http://www.scala-lang.org/"
+                      extra-info.apiURL="http://www.scala-lang.org/api/2.12.1/" downloaded="false" searched="false"
+                      default="false" conf="default, compile, runtime, default(compile), master" position="0">
+                <license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+                <metadata-artifact status="no" details="" size="2653" time="0"
+                                   location="/home/synerzip/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.1.xml"
+                                   searched="false" origin-is-local="false"
+                                   origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1.pom"/>
+                <caller organisation="default" name="hotelroomreservation_2.12" conf="compile, runtime" rev="2.12.1"
+                        rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="1.0"/>
+                <artifacts>
+                    <artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5272325" time="0"
+                              location="/home/synerzip/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.1.jar">
+                        <origin-location is-local="false"
+                                         location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1.jar"/>
+                    </artifact>
+                </artifacts>
+            </revision>
+        </module>
+    </dependencies>
 </ivy-report>

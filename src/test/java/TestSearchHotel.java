@@ -57,7 +57,7 @@ public class TestSearchHotel {
         cheapestHotelTest.setAccessible(true);
         Hotel nameOfHotel = (Hotel) cheapestHotelTest.invoke(searchHotel, "REGULAR", datelist, hotelList);
 
-        String nm =nameOfHotel.getName();
+        String nm = nameOfHotel.getName();
         String expectedResult = "SMN Deluxe";
 
         System.out.println("Expected : " + expectedResult + "\nActual   : " + nm);

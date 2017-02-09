@@ -23,7 +23,7 @@ public class Rate {
 
     @Override
     public String toString() {
-        return  " Rate : " + rateValue;
+        return " Rate : " + rateValue;
     }
 
 }

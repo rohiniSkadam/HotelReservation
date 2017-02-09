@@ -9,7 +9,6 @@ import java.util.*;
 /**
  * Created by synerzip on 7/2/17.
  */
-
 public class HotelController {
 
     private static Logger logger = Logger.getLogger(HotelController.class);

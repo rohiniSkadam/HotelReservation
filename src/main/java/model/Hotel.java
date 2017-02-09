@@ -8,7 +8,7 @@ public class Hotel {
     private String name;
     private List<HotelRate> rates;
     private int totalRate;
-    private HashMap<String,List<Rate>> custHotalRates;
+    private HashMap<String, List<Rate>> custHotalRates;
 
 
     public HashMap<String, List<Rate>> getCustHotalRates() {

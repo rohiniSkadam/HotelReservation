@@ -725,3 +725,108 @@ DEBUG   2017-02-09 15:22:45,781 [main] controller.HotelController  - Hotel :
 , REWARDS  [ Rate : 800,  Rate : 1250]
 , GUEST  [ Rate : 100,  Rate : 500]
 ]
+INFO    2017-02-09 15:35:05,198 [main] HotelApp  - hotels.yml file loaded successfully
+INFO    2017-02-09 15:35:05,200 [main] HotelApp  - customers.yml file loaded successfully
+INFO    2017-02-09 15:35:05,204 [main] HotelApp  - List of Date is updated successfully.
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Weekday count : 1	 Weekend count : 2
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Total Rate is : 8000
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Setting total rate for Hotel : SMN Star  Total Rate :8000
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Weekday count : 1	 Weekend count : 2
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Total Rate is : 8000
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Setting total rate for Hotel : SMN Deluxe  Total Rate :8000
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Weekday count : 1	 Weekend count : 2
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Total Rate is : 8000
+DEBUG   2017-02-09 15:35:05,205 [main] controller.HotelController  - Setting total rate for Hotel : SMN Executive  Total Rate :8000
+DEBUG   2017-02-09 15:35:05,206 [main] controller.HotelController  - Hotel : 
+ Rating : 5
+ Name : 'SMN Executive'
+ Total Rate : 8000
+ Rate : 
+[REGULAR  [ Rate : 3000,  Rate : 2500]
+, REWARDS  [ Rate : 2500,  Rate : 2200]
+, GUEST  [ Rate : 300,  Rate : 300]
+]
+INFO    2017-02-09 15:35:19,595 [main] HotelApp  - hotels.yml file loaded successfully
+INFO    2017-02-09 15:35:19,597 [main] HotelApp  - customers.yml file loaded successfully
+INFO    2017-02-09 15:35:19,601 [main] HotelApp  - List of Date is updated successfully.
+DEBUG   2017-02-09 15:35:19,601 [main] controller.HotelController  - Weekday count : 0	 Weekend count : 2
+DEBUG   2017-02-09 15:35:19,601 [main] controller.HotelController  - Total Rate is : 5000
+DEBUG   2017-02-09 15:35:19,601 [main] controller.HotelController  - Setting total rate for Hotel : SMN Star  Total Rate :5000
+DEBUG   2017-02-09 15:35:19,601 [main] controller.HotelController  - Weekday count : 0	 Weekend count : 2
+DEBUG   2017-02-09 15:35:19,601 [main] controller.HotelController  - Total Rate is : 5000
+DEBUG   2017-02-09 15:35:19,601 [main] controller.HotelController  - Setting total rate for Hotel : SMN Deluxe  Total Rate :5000
+DEBUG   2017-02-09 15:35:19,602 [main] controller.HotelController  - Weekday count : 0	 Weekend count : 2
+DEBUG   2017-02-09 15:35:19,602 [main] controller.HotelController  - Total Rate is : 5000
+DEBUG   2017-02-09 15:35:19,602 [main] controller.HotelController  - Setting total rate for Hotel : SMN Executive  Total Rate :5000
+DEBUG   2017-02-09 15:35:19,602 [main] controller.HotelController  - Hotel : 
+ Rating : 5
+ Name : 'SMN Executive'
+ Total Rate : 5000
+ Rate : 
+[REGULAR  [ Rate : 3000,  Rate : 2500]
+, REWARDS  [ Rate : 2500,  Rate : 2200]
+, GUEST  [ Rate : 300,  Rate : 300]
+]
+INFO    2017-02-09 15:35:51,761 [main] HotelApp  - hotels.yml file loaded successfully
+INFO    2017-02-09 15:35:51,763 [main] HotelApp  - customers.yml file loaded successfully
+INFO    2017-02-09 15:35:51,766 [main] HotelApp  - List of Date is updated successfully.
+DEBUG   2017-02-09 15:35:51,766 [main] controller.HotelController  - Weekday count : 0	 Weekend count : 2
+DEBUG   2017-02-09 15:35:51,767 [main] controller.HotelController  - Total Rate is : 3000
+DEBUG   2017-02-09 15:35:51,767 [main] controller.HotelController  - Setting total rate for Hotel : SMN Star  Total Rate :3000
+DEBUG   2017-02-09 15:35:51,767 [main] controller.HotelController  - Weekday count : 0	 Weekend count : 2
+DEBUG   2017-02-09 15:35:51,767 [main] controller.HotelController  - Total Rate is : 3000
+DEBUG   2017-02-09 15:35:51,767 [main] controller.HotelController  - Setting total rate for Hotel : SMN Deluxe  Total Rate :3000
+DEBUG   2017-02-09 15:35:51,767 [main] controller.HotelController  - Weekday count : 0	 Weekend count : 2
+DEBUG   2017-02-09 15:35:51,767 [main] controller.HotelController  - Total Rate is : 5000
+DEBUG   2017-02-09 15:35:51,767 [main] controller.HotelController  - Setting total rate for Hotel : SMN Executive  Total Rate :5000
+DEBUG   2017-02-09 15:35:51,768 [main] controller.HotelController  - Hotel : 
+ Rating : 4
+ Name : 'SMN Deluxe'
+ Total Rate : 3000
+ Rate : 
+[REGULAR  [ Rate : 2000,  Rate : 1500]
+, REWARDS  [ Rate : 1500,  Rate : 1200]
+, GUEST  [ Rate : 200,  Rate : 600]
+]
+INFO    2017-02-09 15:39:20,034 [main] HotelApp  - hotels.yml file loaded successfully
+INFO    2017-02-09 15:39:20,036 [main] HotelApp  - customers.yml file loaded successfully
+INFO    2017-02-09 15:39:20,039 [main] HotelApp  - List of Date is updated successfully.
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Weekday count : 2	 Weekend count : 1
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Total Rate is : 2850
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Setting total rate for Hotel : SMN Star  Total Rate :2850
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Weekday count : 2	 Weekend count : 1
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Total Rate is : 4200
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Setting total rate for Hotel : SMN Deluxe  Total Rate :4200
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Weekday count : 2	 Weekend count : 1
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Total Rate is : 7200
+DEBUG   2017-02-09 15:39:20,040 [main] controller.HotelController  - Setting total rate for Hotel : SMN Executive  Total Rate :7200
+DEBUG   2017-02-09 15:39:20,041 [main] controller.HotelController  - Hotel : 
+ Rating : 3
+ Name : 'SMN Star'
+ Total Rate : 2850
+ Rate : 
+[REGULAR  [ Rate : 1000,  Rate : 1500]
+, REWARDS  [ Rate : 800,  Rate : 1250]
+, GUEST  [ Rate : 100,  Rate : 500]
+]
+INFO    2017-02-09 15:40:30,956 [main] HotelApp  - hotels.yml file loaded successfully
+INFO    2017-02-09 15:40:30,959 [main] HotelApp  - customers.yml file loaded successfully
+INFO    2017-02-09 15:40:30,963 [main] HotelApp  - List of Date is updated successfully.
+DEBUG   2017-02-09 15:40:30,963 [main] controller.HotelController  - Weekday count : 2	 Weekend count : 1
+DEBUG   2017-02-09 15:40:30,963 [main] controller.HotelController  - Total Rate is : 700
+DEBUG   2017-02-09 15:40:30,963 [main] controller.HotelController  - Setting total rate for Hotel : SMN Star  Total Rate :700
+DEBUG   2017-02-09 15:40:30,963 [main] controller.HotelController  - Weekday count : 2	 Weekend count : 1
+DEBUG   2017-02-09 15:40:30,963 [main] controller.HotelController  - Total Rate is : 1000
+DEBUG   2017-02-09 15:40:30,963 [main] controller.HotelController  - Setting total rate for Hotel : SMN Deluxe  Total Rate :1000
+DEBUG   2017-02-09 15:40:30,963 [main] controller.HotelController  - Weekday count : 2	 Weekend count : 1
+DEBUG   2017-02-09 15:40:30,964 [main] controller.HotelController  - Total Rate is : 900
+DEBUG   2017-02-09 15:40:30,964 [main] controller.HotelController  - Setting total rate for Hotel : SMN Executive  Total Rate :900
+DEBUG   2017-02-09 15:40:30,964 [main] controller.HotelController  - Hotel : 
+ Rating : 3
+ Name : 'SMN Star'
+ Total Rate : 700
+ Rate : 
+[REGULAR  [ Rate : 1000,  Rate : 1500]
+, REWARDS  [ Rate : 800,  Rate : 1250]
+, GUEST  [ Rate : 100,  Rate : 500]
+]
