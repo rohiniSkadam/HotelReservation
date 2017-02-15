@@ -1,0 +1,8 @@
+- !!model.Customer
+  custType : REGULAR
+- !!model.Customer
+  custType : REWARDS
+- !!model.Customer
+  custType : GUEST
+- !!model.Customer
+  custType : VIP

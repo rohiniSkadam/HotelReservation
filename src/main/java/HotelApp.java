@@ -22,8 +22,8 @@ public class HotelApp {
         input = sc.nextLine().trim();
 
         Hotel cheapHotel = hotelController.getCheapestHotel(input);
-        if(cheapHotel!=null)
-        DisplayHotel.display(cheapHotel);
+        if (cheapHotel != null)
+            DisplayHotel.display(cheapHotel);
         else System.out.println("Hotel Not Found for your Input");
 
     }

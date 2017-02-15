@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 /**
  * Created by synerzip on 7/2/17.
@@ -22,10 +23,8 @@ public class TestSearchHotel {
 
         int a = 1000;
         int b = 1500;
-
         Date date = new Date("21-Mar-2009");
         Date date1 = new Date("22-Mar-2009");
-
         ArrayList<Date> datelist = new ArrayList<>();
         datelist.add(date);
         datelist.add(date1);
@@ -41,8 +40,6 @@ public class TestSearchHotel {
 
     @Test
     public void testFindCheapestHotel() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-
-
         Method cheapestHotelTest = HotelController.class.getDeclaredMethod("getCheapestHotel", String.class);
         cheapestHotelTest.setAccessible(true);
         Hotel nameOfHotel = (Hotel) cheapestHotelTest.invoke(searchHotel, "Regular: 21-Mar-2009 sat, 22-Mar-2009 sun");
@@ -53,4 +50,5 @@ public class TestSearchHotel {
         System.out.println("Expected : " + expectedResult + "\nActual   : " + nm);
         assertEquals("Result  : ", expectedResult, nm);
     }
+
 }

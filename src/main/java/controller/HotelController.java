@@ -7,10 +7,8 @@ import model.Rate;
 import org.apache.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
+import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -26,6 +24,7 @@ public class HotelController {
     private List<Hotel> hotelList = null;
     private ArrayList<Date> datelist = new ArrayList<>();
     private List<Customer> customerList = null;
+    File dir = new File("/home/synerzip/HotelRoomReservation/src/main/java/inputFiles");
 
     /**
      * Function to find cheapest Hotel from List of hotel
@@ -36,9 +35,9 @@ public class HotelController {
      */
     public Hotel getCheapestHotel(String input) throws FileNotFoundException {
         loadDetails();
-        boolean flag=validateInput(input);
+        boolean flag = validateInput(input);
 
-        if(flag) {
+        if (flag) {
             setHotelTotalRate(customerType, hotelList, datelist);
             Collections.sort(hotelList, new Comparator<Hotel>() {
                 @Override
@@ -52,8 +51,7 @@ public class HotelController {
 
             logger.debug("Hotel : " + hotelList.get(0));
             return hotelList.get(0);
-        }
-        else {
+        } else {
             System.out.println("Invalid Input. ");
             return null;
         }
@@ -191,8 +189,8 @@ public class HotelController {
      */
     private void loadHotels() throws FileNotFoundException {
         Yaml obj = new Yaml();
-        String path = "/home/synerzip/HotelRoomReservation/src/main/java/inputFiles/hotels.yml";
-        InputStream inputStream = new FileInputStream(new File(path));
+        File file = new File(getClass().getClassLoader().getResource("hotels.yml").getFile());
+        InputStream inputStream = new FileInputStream(file);
         hotelList = (List<Hotel>) obj.load(inputStream);
         logger.info("hotels.yml file loaded successfully");
     }
@@ -204,8 +202,8 @@ public class HotelController {
      */
     private void loadCustomer() throws FileNotFoundException {
         Yaml obj = new Yaml();
-        String path = "/home/synerzip/HotelRoomReservation/src/main/java/inputFiles/customers.yml";
-        InputStream inputStream = new FileInputStream(new File(path));
+        File file = new File(getClass().getClassLoader().getResource("customers.yml").getFile());
+        InputStream inputStream = new FileInputStream(file);
         customerList = (List<Customer>) obj.load(inputStream);
         logger.info("customers.yml file loaded successfully");
     }
