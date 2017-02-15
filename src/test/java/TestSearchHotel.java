@@ -41,21 +41,11 @@ public class TestSearchHotel {
 
     @Test
     public void testFindCheapestHotel() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Date date = new Date("21-Mar-2009");
-        Date date1 = new Date("22-Mar-2009");
-
-        ArrayList<Date> datelist = new ArrayList<>();
-        datelist.add(date);
-        datelist.add(date1);
 
 
-        Method listOfHotelTest = HotelApp.class.getDeclaredMethod("loadDetails");
-        listOfHotelTest.setAccessible(true);
-        ArrayList<Hotel> hotelList = (ArrayList<Hotel>) listOfHotelTest.invoke(hotelMain);
-
-        Method cheapestHotelTest = HotelController.class.getDeclaredMethod("getCheapestHotel", String.class, ArrayList.class, ArrayList.class);
+        Method cheapestHotelTest = HotelController.class.getDeclaredMethod("getCheapestHotel", String.class);
         cheapestHotelTest.setAccessible(true);
-        Hotel nameOfHotel = (Hotel) cheapestHotelTest.invoke(searchHotel, "REGULAR", datelist, hotelList);
+        Hotel nameOfHotel = (Hotel) cheapestHotelTest.invoke(searchHotel, "Regular: 21-Mar-2009 sat, 22-Mar-2009 sun");
 
         String nm = nameOfHotel.getName();
         String expectedResult = "SMN Deluxe";

@@ -4,3 +4,5 @@
   custType : REWARDS
 - !!model.Customer
   custType : GUEST
+- !!model.Customer
+  custType : VIP

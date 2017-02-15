@@ -3,6 +3,7 @@ package model;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class Hotel {
     private int rating;
     private String name;
@@ -10,6 +11,17 @@ public class Hotel {
     private int totalRate;
     private HashMap<String, List<Rate>> custHotalRates;
 
+    public Hotel(String name, int rating, List<HotelRate> rates, int totalRate, HashMap<String, List<Rate>> custHotalRates) {
+        this.rating = rating;
+        this.name = name;
+        this.rates = rates;
+        this.totalRate = totalRate;
+        this.custHotalRates = custHotalRates;
+    }
+
+    public Hotel() {
+
+    }
 
     public HashMap<String, List<Rate>> getCustHotalRates() {
         return custHotalRates;
@@ -55,5 +67,4 @@ public class Hotel {
     public String toString() {
         return "\n Rating : " + rating + "\n Name : '" + name + '\'' + "\n Total Rate : " + totalRate + "\n Rate : \n" + rates;
     }
-
 }

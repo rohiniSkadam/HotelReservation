@@ -47,7 +47,7 @@
       rate :
       - !!model.Rate
         rateType : WeekDay
-        rateValue : 1500
+        rateValue : 800
       - !!model.Rate
         rateType : WeekEnd
         rateValue : 1200

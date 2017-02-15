@@ -4,7 +4,7 @@
           module="hotelroomreservation$sources_javadoc_2.12"
           revision="1.0"
           status="integration"
-          publication="20170209143726"
+          publication="20170215151433"
     />
     <configurations>
         <conf name="compile" visibility="public" description=""/>
