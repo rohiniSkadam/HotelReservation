@@ -8,7 +8,6 @@ import org.apache.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.*;
-import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -24,7 +23,6 @@ public class HotelController {
     private List<Hotel> hotelList = null;
     private ArrayList<Date> datelist = new ArrayList<>();
     private List<Customer> customerList = null;
-    File dir = new File("/home/synerzip/HotelRoomReservation/src/main/java/inputFiles");
 
     /**
      * Function to find cheapest Hotel from List of hotel
